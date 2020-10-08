@@ -1,0 +1,12 @@
+
+.foodtime_mockup {
+  background-image: url("../src/assets/img/foodtime-mockup.jpg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.circle-img {
+  width: 60px;
+  height: 60px;
+}
