@@ -1,12 +1,12 @@
 import React, {useContext}from 'react';
 import { useGoogleLogin } from 'react-google-login'
-import { UserContext } from "../../context/UserContext"
+import { UserContext } from '../../context/UserContext'
+import { googleId } from '../../config'
 
 // refresh token
-// import { refreshTokenSetup } from '../utils/refreshToken';
+// import { refreshTokenSetup } from '../utils/refreshToken'
 
-const clientId =
-  '719928412877-br49om6oaaj3f99gij46045nqghkrori.apps.googleusercontent.com'
+const clientId = googleId
 
 function GoogleAuth() {
   const [user, setUser] = useContext(UserContext)
@@ -34,8 +34,7 @@ function GoogleAuth() {
     clientId,
     isSignedIn: true,
     accessType: 'offline',
-    // responseType: 'code',
-    // prompt: 'consent',
+
   });
 
   return (

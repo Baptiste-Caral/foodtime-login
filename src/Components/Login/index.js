@@ -4,9 +4,6 @@ import { UserContext } from "../../context/UserContext"
 import { Link } from 'react-router-dom'
 import GoogleAuth from '../Auth/GoogleAuth'
 
-
-
-
 function Login() {
   
   const [user, setUser] = useContext(UserContext)
@@ -16,8 +13,7 @@ function Login() {
   const [invalidPassword, setInvalidPassword] = useState(false)
   
 const isChecked = (e) => {
-
-  
+ 
   setStayConnected(e.target.checked)
 }
   const handleChangeFormValues = (event) => {
@@ -40,7 +36,6 @@ const isChecked = (e) => {
     } else {
       setInvalidPassword(false)
     }
-
     if (userdata && userdata.password === formValues.password) {
       const handleUserDatas = { 
         email: userdata.email,
@@ -90,23 +85,13 @@ const isChecked = (e) => {
                         </div>
                       </div>
                       <button className="btn btn-primary btn-block text-white btn-user" type="submit">Se connecter</button>
-                      {/* <a href="https://" className="btn btn-primary btn-block text-white d-none btn-google btn-user" role="button">
-                        <i className="fab fa-google"></i>&nbsp; Login with Google</a>
-                      <a href="https://" className="btn btn-primary btn-block text-white d-none btn-facebook btn-user"
-                        role="button">
-                        <i className="fab fa-facebook-f">
-                        </i>&nbsp; Login with Facebook</a> */}
                       <hr></hr>
-                    <GoogleAuth />
-                      {/* <hr></hr>
-                    <FacebookAuth /> */}
+                      <GoogleAuth />
                       <hr></hr>
                     </form>
                     <Link to="/forgot">
                       <div className="text-center"><button  type="button" className="btn btn-link btn-sm">Mot de passe oublié ?</button></div>
                     </Link>
-                    {/* <div className="g-signin2" onSuccess={onSignIn}></div>
-                    <button  onClick={signOut}>Sign out</button> */}
                   </div>
                 </div>
               </div>
